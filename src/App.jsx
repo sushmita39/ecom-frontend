@@ -9,8 +9,7 @@ import Header from "./Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  return;
-  {
+  return (
     <>
       <BrowserRouter>
         <Header />
@@ -24,8 +23,8 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
-    </>;
-  }
+    </>
+  )
 }
 
 export default App;

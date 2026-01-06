@@ -6,7 +6,7 @@ function Products() {
   useEffect(() => {
     fetch("https://ecommerece-with-backend1.onrender.com/products")
       .then((response) => response.json())
-      .then((data) => setProducts(data))
+      .then((data) => setproducts(data))
       .catch((err)=>console.log(err))
       
   }, []);

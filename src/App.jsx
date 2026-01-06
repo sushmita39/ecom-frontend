@@ -1,0 +1,29 @@
+import Register from "./pages/Register";
+import Produtcs from "./pages/Products";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Login from "./pages/Login";
+
+import Header from "../src/Header";
+
+import { BrowserRouter, Route } from "react-router-dom";
+
+function App() {
+  return;
+  {
+    <>
+      <BrowserRouter>
+        <Header />
+        <Route>
+          <Route path="/register" element={<Register />} />
+          <Route path="/products" element={<Produtcs />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+      </BrowserRouter>
+    </>;
+  }
+}
+
+export default App;

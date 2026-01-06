@@ -1,12 +1,14 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
-function products() {
+function Products() {
   const [products, setproducts] = useState([]);
   useEffect(() => {
     fetch("https://ecommerece-with-backend1.onrender.com/products")
       .then((response) => response.json())
-      .then((data) => setproducts(data));
+      .then((data) => setProducts(data))
+      .catch((err)=>console.log(err))
+      
   }, []);
 
   return (
@@ -16,7 +18,7 @@ function products() {
         {products.map(function (p) {
           return (
             <div key={p.id}>
-              <img src={p.image} alt="" />
+              <img src={p.image} alt="" width={150} />
               <p>{p.title}</p>
               <p>{p.price}</p>
             </div>
@@ -26,4 +28,4 @@ function products() {
     </>
   );
 }
-export default products;
+export default Products;

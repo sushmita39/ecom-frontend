@@ -58,7 +58,7 @@ function Register() {
               setpassword(e.target.value);
             }}
           ></input>
-        </div>
+        </div><br/>
         <button>"Submit"</button>
       </form>
     </>

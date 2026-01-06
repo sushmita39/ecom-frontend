@@ -9,13 +9,15 @@ import Header from "./Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  return (
+  return(
     <>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/products" element={<Produtcs />} />
+          <Route path="/" element={<Home />} />
+
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />

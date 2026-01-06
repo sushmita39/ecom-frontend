@@ -1,7 +1,7 @@
 import React from "react";
-
+import { Link, Links } from "react-router-dom";
 function Header() {
-  return;
+  return
   {
     <>
       <head>
@@ -26,11 +26,11 @@ function Header() {
             <b>My Mart</b>
           </header>
           <nav style={{ display: "flex", gap: "20px" }}>
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Register</a>
-            <a href="">Products</a>
-            <a href="">Login</a>
+           <Link to={"/"}> <a href="">Home</a></Link>
+            <Link to={"/about"}><a href="">About</a></Link>
+            <Link to ={"/register"}><a href="">Register</a></Link>
+            <Links to={"/products"}><a href="">Products</a></Links>
+           <Link to={"/login"}> <a href="">Login</a></Link>
           </nav>
         </div>
       </head>
